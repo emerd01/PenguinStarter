@@ -43,6 +43,14 @@ var testMean = function (penguin) {
     return d3.mean(testGrade)
 }
 
+var finalMean = function (penguin) {
+    var getFinalGrade = function (final) {
+        return final.grade
+    }
+    var finalGrade = penguin.final.map(getFinalGrade)
+    return d3.mean(finalGrade)
+}
+
  
 
 var drawTable = function (penguins) {
